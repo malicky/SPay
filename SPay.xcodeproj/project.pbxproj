@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		131B33BB19EBD48B0004F0B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B33BA19EBD48B0004F0B5 /* Foundation.framework */; };
+		131B33BD19EBD48B0004F0B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B33BC19EBD48B0004F0B5 /* CoreGraphics.framework */; };
+		131B33BF19EBD48B0004F0B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B33BE19EBD48B0004F0B5 /* UIKit.framework */; };
+		131B33C519EBD48B0004F0B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 131B33C319EBD48B0004F0B5 /* InfoPlist.strings */; };
+		131B33C719EBD48B0004F0B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B33C619EBD48B0004F0B5 /* main.m */; };
+		131B33CB19EBD48B0004F0B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B33CA19EBD48B0004F0B5 /* AppDelegate.m */; };
+		131B33CE19EBD48B0004F0B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131B33CC19EBD48B0004F0B5 /* Main.storyboard */; };
+		131B33D119EBD48B0004F0B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B33D019EBD48B0004F0B5 /* ViewController.m */; };
+		131B33D319EBD48B0004F0B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 131B33D219EBD48B0004F0B5 /* Images.xcassets */; };
+		131B33DA19EBD48B0004F0B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B33D919EBD48B0004F0B5 /* XCTest.framework */; };
+		131B33DB19EBD48B0004F0B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B33BA19EBD48B0004F0B5 /* Foundation.framework */; };
+		131B33DC19EBD48B0004F0B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B33BE19EBD48B0004F0B5 /* UIKit.framework */; };
+		131B33E419EBD48B0004F0B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 131B33E219EBD48B0004F0B5 /* InfoPlist.strings */; };
+		131B33E619EBD48B0004F0B5 /* SPayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B33E519EBD48B0004F0B5 /* SPayTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		131B33DD19EBD48B0004F0B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 131B33AF19EBD48B0004F0B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 131B33B619EBD48B0004F0B5;
+			remoteInfo = SPay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		131B33B719EBD48B0004F0B5 /* SPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		131B33BA19EBD48B0004F0B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		131B33BC19EBD48B0004F0B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		131B33BE19EBD48B0004F0B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		131B33C219EBD48B0004F0B5 /* SPay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPay-Info.plist"; sourceTree = "<group>"; };
+		131B33C419EBD48B0004F0B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		131B33C619EBD48B0004F0B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		131B33C819EBD48B0004F0B5 /* SPay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPay-Prefix.pch"; sourceTree = "<group>"; };
+		131B33C919EBD48B0004F0B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		131B33CA19EBD48B0004F0B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		131B33CD19EBD48B0004F0B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		131B33CF19EBD48B0004F0B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		131B33D019EBD48B0004F0B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		131B33D219EBD48B0004F0B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		131B33D819EBD48B0004F0B5 /* SPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		131B33D919EBD48B0004F0B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		131B33E119EBD48B0004F0B5 /* SPayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPayTests-Info.plist"; sourceTree = "<group>"; };
+		131B33E319EBD48B0004F0B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		131B33E519EBD48B0004F0B5 /* SPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPayTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		131B33B419EBD48B0004F0B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B33BD19EBD48B0004F0B5 /* CoreGraphics.framework in Frameworks */,
+				131B33BF19EBD48B0004F0B5 /* UIKit.framework in Frameworks */,
+				131B33BB19EBD48B0004F0B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		131B33D519EBD48B0004F0B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B33DA19EBD48B0004F0B5 /* XCTest.framework in Frameworks */,
+				131B33DC19EBD48B0004F0B5 /* UIKit.framework in Frameworks */,
+				131B33DB19EBD48B0004F0B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		131B33AE19EBD48B0004F0B5 = {
+			isa = PBXGroup;
+			children = (
+				131B33C019EBD48B0004F0B5 /* SPay */,
+				131B33DF19EBD48B0004F0B5 /* SPayTests */,
+				131B33B919EBD48B0004F0B5 /* Frameworks */,
+				131B33B819EBD48B0004F0B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		131B33B819EBD48B0004F0B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				131B33B719EBD48B0004F0B5 /* SPay.app */,
+				131B33D819EBD48B0004F0B5 /* SPayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		131B33B919EBD48B0004F0B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				131B33BA19EBD48B0004F0B5 /* Foundation.framework */,
+				131B33BC19EBD48B0004F0B5 /* CoreGraphics.framework */,
+				131B33BE19EBD48B0004F0B5 /* UIKit.framework */,
+				131B33D919EBD48B0004F0B5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		131B33C019EBD48B0004F0B5 /* SPay */ = {
+			isa = PBXGroup;
+			children = (
+				131B33C919EBD48B0004F0B5 /* AppDelegate.h */,
+				131B33CA19EBD48B0004F0B5 /* AppDelegate.m */,
+				131B33CC19EBD48B0004F0B5 /* Main.storyboard */,
+				131B33CF19EBD48B0004F0B5 /* ViewController.h */,
+				131B33D019EBD48B0004F0B5 /* ViewController.m */,
+				131B33D219EBD48B0004F0B5 /* Images.xcassets */,
+				131B33C119EBD48B0004F0B5 /* Supporting Files */,
+			);
+			path = SPay;
+			sourceTree = "<group>";
+		};
+		131B33C119EBD48B0004F0B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				131B33C219EBD48B0004F0B5 /* SPay-Info.plist */,
+				131B33C319EBD48B0004F0B5 /* InfoPlist.strings */,
+				131B33C619EBD48B0004F0B5 /* main.m */,
+				131B33C819EBD48B0004F0B5 /* SPay-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		131B33DF19EBD48B0004F0B5 /* SPayTests */ = {
+			isa = PBXGroup;
+			children = (
+				131B33E519EBD48B0004F0B5 /* SPayTests.m */,
+				131B33E019EBD48B0004F0B5 /* Supporting Files */,
+			);
+			path = SPayTests;
+			sourceTree = "<group>";
+		};
+		131B33E019EBD48B0004F0B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				131B33E119EBD48B0004F0B5 /* SPayTests-Info.plist */,
+				131B33E219EBD48B0004F0B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		131B33B619EBD48B0004F0B5 /* SPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131B33E919EBD48B0004F0B5 /* Build configuration list for PBXNativeTarget "SPay" */;
+			buildPhases = (
+				131B33B319EBD48B0004F0B5 /* Sources */,
+				131B33B419EBD48B0004F0B5 /* Frameworks */,
+				131B33B519EBD48B0004F0B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPay;
+			productName = SPay;
+			productReference = 131B33B719EBD48B0004F0B5 /* SPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		131B33D719EBD48B0004F0B5 /* SPayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131B33EC19EBD48B0004F0B5 /* Build configuration list for PBXNativeTarget "SPayTests" */;
+			buildPhases = (
+				131B33D419EBD48B0004F0B5 /* Sources */,
+				131B33D519EBD48B0004F0B5 /* Frameworks */,
+				131B33D619EBD48B0004F0B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				131B33DE19EBD48B0004F0B5 /* PBXTargetDependency */,
+			);
+			name = SPayTests;
+			productName = SPayTests;
+			productReference = 131B33D819EBD48B0004F0B5 /* SPayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		131B33AF19EBD48B0004F0B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Malick Youla";
+				TargetAttributes = {
+					131B33D719EBD48B0004F0B5 = {
+						TestTargetID = 131B33B619EBD48B0004F0B5;
+					};
+				};
+			};
+			buildConfigurationList = 131B33B219EBD48B0004F0B5 /* Build configuration list for PBXProject "SPay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 131B33AE19EBD48B0004F0B5;
+			productRefGroup = 131B33B819EBD48B0004F0B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				131B33B619EBD48B0004F0B5 /* SPay */,
+				131B33D719EBD48B0004F0B5 /* SPayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		131B33B519EBD48B0004F0B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B33D319EBD48B0004F0B5 /* Images.xcassets in Resources */,
+				131B33C519EBD48B0004F0B5 /* InfoPlist.strings in Resources */,
+				131B33CE19EBD48B0004F0B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		131B33D619EBD48B0004F0B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B33E419EBD48B0004F0B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		131B33B319EBD48B0004F0B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B33D119EBD48B0004F0B5 /* ViewController.m in Sources */,
+				131B33CB19EBD48B0004F0B5 /* AppDelegate.m in Sources */,
+				131B33C719EBD48B0004F0B5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		131B33D419EBD48B0004F0B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B33E619EBD48B0004F0B5 /* SPayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		131B33DE19EBD48B0004F0B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 131B33B619EBD48B0004F0B5 /* SPay */;
+			targetProxy = 131B33DD19EBD48B0004F0B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		131B33C319EBD48B0004F0B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				131B33C419EBD48B0004F0B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		131B33CC19EBD48B0004F0B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				131B33CD19EBD48B0004F0B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		131B33E219EBD48B0004F0B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				131B33E319EBD48B0004F0B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		131B33E719EBD48B0004F0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		131B33E819EBD48B0004F0B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		131B33EA19EBD48B0004F0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPay/SPay-Prefix.pch";
+				INFOPLIST_FILE = "SPay/SPay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		131B33EB19EBD48B0004F0B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPay/SPay-Prefix.pch";
+				INFOPLIST_FILE = "SPay/SPay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		131B33ED19EBD48B0004F0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SPay.app/SPay";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPay/SPay-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SPayTests/SPayTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		131B33EE19EBD48B0004F0B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SPay.app/SPay";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPay/SPay-Prefix.pch";
+				INFOPLIST_FILE = "SPayTests/SPayTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		131B33B219EBD48B0004F0B5 /* Build configuration list for PBXProject "SPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131B33E719EBD48B0004F0B5 /* Debug */,
+				131B33E819EBD48B0004F0B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		131B33E919EBD48B0004F0B5 /* Build configuration list for PBXNativeTarget "SPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131B33EA19EBD48B0004F0B5 /* Debug */,
+				131B33EB19EBD48B0004F0B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		131B33EC19EBD48B0004F0B5 /* Build configuration list for PBXNativeTarget "SPayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131B33ED19EBD48B0004F0B5 /* Debug */,
+				131B33EE19EBD48B0004F0B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 131B33AF19EBD48B0004F0B5 /* Project object */;
+}
