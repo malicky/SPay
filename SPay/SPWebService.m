@@ -7,6 +7,8 @@
 //
 
 #import "SPWebService.h"
+#import <AdSupport/AdSupport.h>
+#import "NSString+Hashing.h"
 
 @implementation SPWebService
 
@@ -36,25 +38,65 @@
                                      }
                                      else
                                      {
-                                         NSLog(@"response: %@", response);
-
+                                         if ([(NSHTTPURLResponse*)response statusCode] != 200 )
+                                         {
+                                             NSLog(@"response error: %@", response);
+                                             return;
+                                         }
                                      }
+                                     
                                      // in case of succes, start a background queue for parsing
-#if 0
                                      dispatch_queue_t parserQueue = dispatch_queue_create("parserQueue", NULL);
                                      dispatch_async(parserQueue, ^{
-                                         
-                                         YMiTunesXMLParser *parser = [[YMiTunesXMLParser alloc] init];
-                                         
-                                         // parse by pages of kPageRecordsCount records for UI responsivness.
-                                         NSMutableArray * result = [parser parseData:data batchItemsCount:kPageRecordsCount
-                                                                 withCompletionBlock:completionBlock];
-                                         if (result && ( [result count] > 0 ) && completionBlock) {
-                                             completionBlock (result);
+                                         //parse out the json data
+                                         NSError *jsonError = nil;
+                                         id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                                         if ([result isKindOfClass:[NSDictionary class]])
+                                         {
+                                             NSArray *offers = result[@"offers"];
+                                             if (offers && completionBlock) {
+                                                 completionBlock (offers);
+                                             }
                                          }
+                                         
                                      });
-#endif
+                                     
                                  }] resume ];
 }
 
+- (NSString *)paramsString
+{
+    NSMutableString *parameters =  [NSMutableString string];
+    
+    NSString *APP_ID = @"2070";
+    [parameters appendFormat:@"&appid=%@",APP_ID];
+    
+    NSString *APPLE_IDFA = @"";
+    if([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled])
+    {
+        APPLE_IDFA = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    }
+    [parameters appendFormat:@"&apple_idfa=%@",APPLE_IDFA];
+    
+    NSString *APPLE_IDFA_TRACKING_ENABLED = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled] ? @"true" : @"false";
+    [parameters appendFormat:@"&apple_idfa_tracking_enabled=%@",APPLE_IDFA_TRACKING_ENABLED];
+    
+    NSString *LOCALE = @"en";
+    [parameters appendFormat:@"&locale=%@",LOCALE];
+    
+    NSString *OS_VERSION = [[UIDevice currentDevice] systemVersion];
+    [parameters appendFormat:@"&os_version=%@",OS_VERSION];
+    
+    
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    [parameters appendFormat:@"&timestamp=%.0f",timeStamp];
+    
+    NSString *USER_ID = @"spiderman";
+    [parameters appendFormat:@"&uid=%@",USER_ID];
+    
+    NSString *HASH_KEY = [parameters sha1]; //self.apiKeyField.text;
+    [parameters appendFormat:@"&hashkey=%@",HASH_KEY];
+    
+    return parameters;
+}
 @end

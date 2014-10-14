@@ -9,8 +9,6 @@
 #import "StaticTableViewController.h"
 #import "Reachability.h"
 #import "SPWebService.h"
-#import <AdSupport/AdSupport.h>
-#import "NSString+Hashing.h"
 
 @interface StaticTableViewController ()
 
@@ -83,48 +81,19 @@
     NSMutableString *resultString =  [NSMutableString string];
     [resultString appendFormat:@"%@",@"http://api.sponsorpay.com/feed/v1/offers.json?"];
 
-    NSMutableString *parameters =  [NSMutableString string];
+    NSString *parameters =  [[SPWebService sharedInstance] paramsString]; //[NSMutableString string];
 
-    NSString *APP_ID = @"2070";
-    [parameters appendFormat:@"&appid=%@",APP_ID];
-    
-    NSString *APPLE_IDFA = @"";
-    if([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled])
-    {
-        APPLE_IDFA = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    }
-    [parameters appendFormat:@"&apple_idfa=%@",APPLE_IDFA];
-
-    NSString *APPLE_IDFA_TRACKING_ENABLED = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled] ? @"true" : @"false";
-    [parameters appendFormat:@"&apple_idfa_tracking_enabled=%@",APPLE_IDFA_TRACKING_ENABLED];
-
-    NSString *LOCALE = @"en";
-    [parameters appendFormat:@"&locale=%@",LOCALE];
-    
-    NSString *OS_VERSION = [[UIDevice currentDevice] systemVersion];
-    [parameters appendFormat:@"&os_version=%@",OS_VERSION];
-    
-    
-    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
-    [parameters appendFormat:@"&timestamp=%.0f",timeStamp];
-    
-    NSString *USER_ID = @"spiderman";
-    [parameters appendFormat:@"&uid=%@",USER_ID];
-    
-    NSString *HASH_KEY = [parameters sha1]; //self.apiKeyField.text;
-    [parameters appendFormat:@"&hashkey=%@",HASH_KEY];
-    
-    
     [resultString appendFormat:@"%@", parameters];
 
     NSURL *url = [NSURL URLWithString:resultString];
 
-    [[SPWebService sharedInstance] fetchAtURL:url withCompletionBlock:^(NSMutableArray *records) {
+    [[SPWebService sharedInstance] fetchAtURL:url withCompletionBlock:^(NSArray *offers) {
         
     }];
     
-
 }
+
+
 
 - (IBAction)noAction:(id)sender {
     [self.view endEditing:YES];
