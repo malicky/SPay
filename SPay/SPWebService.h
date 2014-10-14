@@ -14,5 +14,5 @@ typedef void(^webServiceCompletionHandler) (NSArray *records);
 + (instancetype) alloc __attribute__((unavailable("alloc not available, call sharedInstance instead")));
 + (instancetype) sharedInstance;
 - (void)fetchAtURL:(NSURL *)url withCompletionBlock:(webServiceCompletionHandler)completionBlock;
-- (NSString *)paramsString;
+- (NSString *)paramsString:(NSString *)apiKey;
 @end

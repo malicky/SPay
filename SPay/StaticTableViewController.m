@@ -78,10 +78,12 @@
         return;
     }
 
+    
+    
     NSMutableString *resultString =  [NSMutableString string];
     [resultString appendFormat:@"%@",@"http://api.sponsorpay.com/feed/v1/offers.json?"];
 
-    NSString *parameters =  [[SPWebService sharedInstance] paramsString]; //[NSMutableString string];
+    NSString *parameters =  [[SPWebService sharedInstance] paramsString:self.apiKeyField.text]; //[NSMutableString string];
 
     [resultString appendFormat:@"%@", parameters];
 
