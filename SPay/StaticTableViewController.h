@@ -16,7 +16,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *pubOField;
 @property (strong, nonatomic) IBOutlet UIButton *yesButton;
 @property (strong, nonatomic) IBOutlet UIButton *noButton;
-- (IBAction)yesAction:(id)sender;
 - (IBAction)noAction:(id)sender;
 
 @end

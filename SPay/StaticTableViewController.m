@@ -7,8 +7,7 @@
 //
 
 #import "StaticTableViewController.h"
-#import "Reachability.h"
-#import "SPWebService.h"
+#import "OffersViewController.h"
 
 @interface StaticTableViewController ()
 
@@ -17,6 +16,10 @@
 @implementation StaticTableViewController
 {
     NSString *_advertiseId;
+    NSArray *_currentOffers;
+    OffersViewController *_segueDestinationViewController;
+    NSString *_segueIdentifier;
+
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -65,39 +68,21 @@
 }
 
 
-
-- (IBAction)yesAction:(id)sender {
-    
-    if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus] == NotReachable) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No internet connection", nil)
-                                                         message:NSLocalizedString(@"Internet connection not available.", nil)
-                                                        delegate:nil
-                                               cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                               otherButtonTitles:nil];
-        [alert show];
-        return;
-    }
-
-    
-    
-    NSMutableString *resultString =  [NSMutableString string];
-    [resultString appendFormat:@"%@",@"http://api.sponsorpay.com/feed/v1/offers.json?"];
-
-    NSString *parameters =  [[SPWebService sharedInstance] paramsString:self.apiKeyField.text]; //[NSMutableString string];
-
-    [resultString appendFormat:@"%@", parameters];
-
-    NSURL *url = [NSURL URLWithString:resultString];
-
-    [[SPWebService sharedInstance] fetchAtURL:url withCompletionBlock:^(NSArray *offers) {
-        
-    }];
-    
-}
-
-
-
 - (IBAction)noAction:(id)sender {
     [self.view endEditing:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"source controller = %@", [segue sourceViewController]);
+    NSLog(@"destination controller = %@", [segue destinationViewController]);
+    NSLog(@"segue identifier = %@", [segue identifier   ]);
+    
+    
+    if ([[segue identifier] isEqualToString:@"showOffers"]) {
+        _segueDestinationViewController = [segue destinationViewController];
+        _segueDestinationViewController.apiKey = self.apiKeyField.text;
+        _segueIdentifier = [segue identifier];
+    }
 }
 @end
