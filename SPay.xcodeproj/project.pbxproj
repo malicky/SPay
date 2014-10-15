@@ -21,12 +21,12 @@
 		131B33E419EBD48B0004F0B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 131B33E219EBD48B0004F0B5 /* InfoPlist.strings */; };
 		131B33E619EBD48B0004F0B5 /* SPayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B33E519EBD48B0004F0B5 /* SPayTests.m */; };
 		131B33F119EBD5480004F0B5 /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B33F019EBD5480004F0B5 /* StaticTableViewController.m */; };
+		1336180D19EE913500631866 /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 1336180C19EE913500631866 /* UIImageView+Network.m */; };
 		13492CC819ED131A00F537DC /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13492CC719ED131A00F537DC /* NSString+Hashing.m */; };
 		13492CCD19EE503600F537DC /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13492CCC19EE503600F537DC /* OffersViewController.m */; };
 		13492CD019EE6B2F00F537DC /* OfferTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13492CCF19EE6B2F00F537DC /* OfferTableCell.m */; };
 		137439A419EC0A9100E6B61A /* SPWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 137439A319EC0A9100E6B61A /* SPWebService.m */; };
 		137439A719EC0CD800E6B61A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 137439A619EC0CD800E6B61A /* Reachability.m */; };
-		AD4315D7B1C949299E7C37BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDCB5C318454717974DF19C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +59,8 @@
 		131B33E519EBD48B0004F0B5 /* SPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPayTests.m; sourceTree = "<group>"; };
 		131B33EF19EBD5480004F0B5 /* StaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTableViewController.h; sourceTree = "<group>"; };
 		131B33F019EBD5480004F0B5 /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
+		1336180B19EE913500631866 /* UIImageView+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Network.h"; sourceTree = "<group>"; };
+		1336180C19EE913500631866 /* UIImageView+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Network.m"; sourceTree = "<group>"; };
 		13492CC619ED131A00F537DC /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
 		13492CC719ED131A00F537DC /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 		13492CCB19EE503600F537DC /* OffersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersViewController.h; sourceTree = "<group>"; };
@@ -81,7 +83,6 @@
 				131B33BD19EBD48B0004F0B5 /* CoreGraphics.framework in Frameworks */,
 				131B33BF19EBD48B0004F0B5 /* UIKit.framework in Frameworks */,
 				131B33BB19EBD48B0004F0B5 /* Foundation.framework in Frameworks */,
-				AD4315D7B1C949299E7C37BE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +134,8 @@
 		131B33C019EBD48B0004F0B5 /* SPay */ = {
 			isa = PBXGroup;
 			children = (
+				1336180B19EE913500631866 /* UIImageView+Network.h */,
+				1336180C19EE913500631866 /* UIImageView+Network.m */,
 				13492CC619ED131A00F537DC /* NSString+Hashing.h */,
 				13492CC719ED131A00F537DC /* NSString+Hashing.m */,
 				137439A819EC0CDF00E6B61A /* Reachibility */,
@@ -198,11 +201,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 131B33E919EBD48B0004F0B5 /* Build configuration list for PBXNativeTarget "SPay" */;
 			buildPhases = (
-				CB25DBBC123B48AA8E3DC487 /* Check Pods Manifest.lock */,
 				131B33B319EBD48B0004F0B5 /* Sources */,
 				131B33B419EBD48B0004F0B5 /* Frameworks */,
 				131B33B519EBD48B0004F0B5 /* Resources */,
-				1B7689C78C094573BF53E8D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,39 +286,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1B7689C78C094573BF53E8D1 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB25DBBC123B48AA8E3DC487 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		131B33B319EBD48B0004F0B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -327,6 +295,7 @@
 				131B33F119EBD5480004F0B5 /* StaticTableViewController.m in Sources */,
 				131B33CB19EBD48B0004F0B5 /* AppDelegate.m in Sources */,
 				131B33C719EBD48B0004F0B5 /* main.m in Sources */,
+				1336180D19EE913500631866 /* UIImageView+Network.m in Sources */,
 				137439A419EC0A9100E6B61A /* SPWebService.m in Sources */,
 				13492CD019EE6B2F00F537DC /* OfferTableCell.m in Sources */,
 				13492CCD19EE503600F537DC /* OffersViewController.m in Sources */,

@@ -13,4 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *title;
 @property (strong, nonatomic) IBOutlet UILabel *teaser;
 @property (strong, nonatomic) IBOutlet UILabel *payout;
+@property (strong, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (strong, nonatomic)  NSString *thumbnailURLString;
 @end

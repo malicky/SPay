@@ -10,4 +10,5 @@
 
 @interface OffersViewController : UITableViewController
 @property (nonatomic, strong) NSString *apiKey;
+@property (nonatomic, strong) NSString *pub0;
 @end

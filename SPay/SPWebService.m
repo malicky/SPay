@@ -64,12 +64,18 @@
                                  }] resume ];
 }
 
-- (NSString *)paramsString:(NSString *)apiKey
+- (NSString *)paramsStringApiKey:(NSString *)apiKey pub0:(NSString *)pub0
 {
     NSMutableString *parameters =  [NSMutableString string];
+
     
     NSString *APP_ID = @"2070";
     [parameters appendFormat:@"appid=%@",APP_ID];
+    [parameters appendFormat:@"&offer_types=%@",@"112"];
+
+    if (![pub0 isEqualToString:@""]) {
+        [parameters appendFormat:@"&pub0=%@",pub0];
+    }
     
     const NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
     [parameters appendFormat:@"&timestamp=%.0f",timeStamp];
@@ -84,6 +90,11 @@
     // now
     parameters = [@"" mutableCopy];
     [parameters appendFormat:@"&appid=%@",APP_ID];
+    [parameters appendFormat:@"&offer_types=%@",@"112"];
+
+    if (![pub0 isEqualToString:@""]) {
+        [parameters appendFormat:@"&pub0=%@",pub0];
+    }
     [parameters appendFormat:@"&timestamp=%.0f",timeStamp];
     [parameters appendFormat:@"&uid=%@",USER_ID];
    // [parameters appendFormat:@"&%@",apiKey];
@@ -91,7 +102,7 @@
     
     NSString * testString = @"appid=157&device_id=2b6f0cc904d137be2e1730235f5664094b831186&ip=212.45.111.17&locale=de &page=2&ps_time=1312211903&pub0=campaign2&timestamp=1312553361 &uid=player1&e95a21621a1865bcbae3bee89c4d4f84";
     NSString * __unused sha1String = [testString sha1]; // a709b9b1cf4332b604879a4af04b376e2bfc94d0 as http://www.sha1-online.com
-    
+
     
     return parameters;
 }

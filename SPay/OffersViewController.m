@@ -9,6 +9,7 @@
 #import "OffersViewController.h"
 #import "Reachability.h"
 #import "SPWebService.h"
+#import "OfferTableCell.h"
 
 @interface OffersViewController ()
 
@@ -59,20 +60,38 @@
         return;
     }
     
-    
+    UIActivityIndicatorView* v = [[UIActivityIndicatorView alloc]
+     initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.view addSubview:v];
+    v.center = self.view.center;
+    [v startAnimating];
+
     
     NSMutableString *resultString =  [NSMutableString string];
     [resultString appendFormat:@"%@",@"http://api.sponsorpay.com/feed/v1/offers.json?"];
     
-    NSString *parameters =  [[SPWebService sharedInstance] paramsString:self.apiKey];
+    NSString *parameters =  [[SPWebService sharedInstance] paramsStringApiKey:self.apiKey pub0:self.pub0];
     
     [resultString appendFormat:@"%@", parameters];
     
     NSURL *url = [NSURL URLWithString:resultString];
     
     [[SPWebService sharedInstance] fetchAtURL:url withCompletionBlock:^(NSArray *offers) {
+        [v removeFromSuperview];
+
+        if (0 == [offers count])
+        {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Sorry", nil)
+                                                             message:NSLocalizedString(@"No offers.", nil)
+                                                            delegate:nil
+                                                   cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                   otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
         NSLog(@"offers count:%lu" ,(unsigned long)[offers count]);
         _currentOffers = offers;
+        [self.tableView reloadData];
         
     }];
     
@@ -83,25 +102,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+    if (_currentOffers)
+    {
+        return [_currentOffers count];
+    }
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"offerTableCellIdentifier";
+    OfferTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    long section = indexPath.section;
+    cell.title.text = _currentOffers[section][@"title"];
+    cell.teaser.text = _currentOffers[section][@"teaser"];
     
+    NSNumber *payout = _currentOffers[section][@"payout"];
+    cell.payout.text = [payout stringValue];
+
+    NSDictionary *thumbnail = _currentOffers[section][@"thumbnail"];
+    cell.thumbnailURLString = thumbnail[@"hires"];
     return cell;
 }
 

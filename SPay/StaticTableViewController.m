@@ -19,7 +19,6 @@
     NSArray *_currentOffers;
     OffersViewController *_segueDestinationViewController;
     NSString *_segueIdentifier;
-
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -82,6 +81,7 @@
     if ([[segue identifier] isEqualToString:@"showOffers"]) {
         _segueDestinationViewController = [segue destinationViewController];
         _segueDestinationViewController.apiKey = self.apiKeyField.text;
+        _segueDestinationViewController.pub0 = self.pubOField.text;
         _segueIdentifier = [segue identifier];
     }
 }
