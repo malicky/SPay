@@ -23,6 +23,7 @@
 		131B33F119EBD5480004F0B5 /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B33F019EBD5480004F0B5 /* StaticTableViewController.m */; };
 		13492CC819ED131A00F537DC /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13492CC719ED131A00F537DC /* NSString+Hashing.m */; };
 		13492CCD19EE503600F537DC /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13492CCC19EE503600F537DC /* OffersViewController.m */; };
+		13492CD019EE6B2F00F537DC /* OfferTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13492CCF19EE6B2F00F537DC /* OfferTableCell.m */; };
 		137439A419EC0A9100E6B61A /* SPWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 137439A319EC0A9100E6B61A /* SPWebService.m */; };
 		137439A719EC0CD800E6B61A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 137439A619EC0CD800E6B61A /* Reachability.m */; };
 		AD4315D7B1C949299E7C37BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDCB5C318454717974DF19C /* libPods.a */; };
@@ -62,6 +63,8 @@
 		13492CC719ED131A00F537DC /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 		13492CCB19EE503600F537DC /* OffersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersViewController.h; sourceTree = "<group>"; };
 		13492CCC19EE503600F537DC /* OffersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersViewController.m; sourceTree = "<group>"; };
+		13492CCE19EE6B2F00F537DC /* OfferTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferTableCell.h; sourceTree = "<group>"; };
+		13492CCF19EE6B2F00F537DC /* OfferTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferTableCell.m; sourceTree = "<group>"; };
 		137439A219EC0A9100E6B61A /* SPWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWebService.h; sourceTree = "<group>"; };
 		137439A319EC0A9100E6B61A /* SPWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPWebService.m; sourceTree = "<group>"; };
 		137439A519EC0CD800E6B61A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				137439A319EC0A9100E6B61A /* SPWebService.m */,
 				13492CCB19EE503600F537DC /* OffersViewController.h */,
 				13492CCC19EE503600F537DC /* OffersViewController.m */,
+				13492CCE19EE6B2F00F537DC /* OfferTableCell.h */,
+				13492CCF19EE6B2F00F537DC /* OfferTableCell.m */,
 				131B33D219EBD48B0004F0B5 /* Images.xcassets */,
 				131B33C119EBD48B0004F0B5 /* Supporting Files */,
 			);
@@ -323,6 +328,7 @@
 				131B33CB19EBD48B0004F0B5 /* AppDelegate.m in Sources */,
 				131B33C719EBD48B0004F0B5 /* main.m in Sources */,
 				137439A419EC0A9100E6B61A /* SPWebService.m in Sources */,
+				13492CD019EE6B2F00F537DC /* OfferTableCell.m in Sources */,
 				13492CCD19EE503600F537DC /* OffersViewController.m in Sources */,
 				137439A719EC0CD800E6B61A /* Reachability.m in Sources */,
 			);
