@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NSString+Hashing.h"
 
 @interface SPayTests : XCTestCase
 
@@ -26,9 +27,11 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testThatSHA1Sample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSString * testString = @"appid=157&device_id=2b6f0cc904d137be2e1730235f5664094b831186&ip=212.45.111.17&locale=de &page=2&ps_time=1312211903&pub0=campaign2&timestamp=1312553361 &uid=player1&e95a21621a1865bcbae3bee89c4d4f84";
+    NSString * sha1String = [testString sha1]; // a709b9b1cf4332b604879a4af04b376e2bfc94d0 as http://www.sha1-online.com
+    XCTAssertTrue([sha1String isEqualToString:@"a709b9b1cf4332b604879a4af04b376e2bfc94d0"], @"");
 }
 
 @end
