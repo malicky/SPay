@@ -78,7 +78,9 @@
     
     [[SPWebService sharedInstance] fetchAtURL:url withCompletionBlock:^(NSArray *offers) {
         [v removeFromSuperview];
-
+        if (!offers) {
+            return;
+        }
         if (0 == [offers count])
         {
             UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Sorry", nil)

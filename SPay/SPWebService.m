@@ -41,6 +41,7 @@
                                          if ([(NSHTTPURLResponse*)response statusCode] != 200 )
                                          {
                                              NSLog(@"response error: %@", response);
+                                             completionBlock(nil);
                                              return;
                                          }
                                      }

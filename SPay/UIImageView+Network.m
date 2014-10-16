@@ -37,8 +37,8 @@ static char URL_KEY;
     
     self.imageURL = url;
     if (!placeholder) {
-        [self.layer setBorderColor:[[UIColor blackColor] CGColor]];
-        [self.layer setBorderWidth:2];
+        //[self.layer setBorderColor:[[UIColor blackColor] CGColor]];
+        //[self.layer setBorderWidth:2];
     }
 	self.image = placeholder;
 	

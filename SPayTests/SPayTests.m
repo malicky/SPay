@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "NSString+Hashing.h"
+#import "SPWebService.h"
 
 @interface SPayTests : XCTestCase
 
@@ -34,4 +35,17 @@
     XCTAssertTrue([sha1String isEqualToString:@"a709b9b1cf4332b604879a4af04b376e2bfc94d0"], @"");
 }
 
+- (void)testWSHandlerCalled {
+    
+    NSMutableString *resultString =  [NSMutableString string];
+    [resultString appendFormat:@"%@",@"http://api.sponsorpay.com/feed/v1/offers.json?"];
+    NSURL *url = [NSURL URLWithString:resultString];
+
+   XCTestExpectation *expectation = [self expectationWithDescription:@"Handler called"];
+    [[SPWebService sharedInstance] fetchAtURL:url withCompletionBlock:^(NSArray *offers) {
+        [expectation fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5. handler:nil];
+
+}
 @end
